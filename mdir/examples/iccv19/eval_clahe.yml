@@ -1,0 +1,11 @@
+#
+# Evaluation of "CLAHE N/D" experiment from the iccv19 paper
+#
+
+network:
+  path: http://cmp.felk.cvut.cz/daynightretrieval/download/models/vgg_clahe_sfmnd0.25-85f6ced3.pth
+  runtime:
+    wrappers:
+      eval:
+        0_cirwhiten:
+          whitening: http://cmp.felk.cvut.cz/daynightretrieval/download/models/vgg_clahe_sfmnd0.25-lw-d706adc9.pkl

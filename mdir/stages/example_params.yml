@@ -1,0 +1,66 @@
+network:
+    type: SingleNetwork
+    path: ""
+    init_weights: ""
+    model:
+        architecture: ""
+    runtime:
+        wrappers: ""
+        data:
+            mean_std: []
+training:
+    type: ""
+    checkpoints:
+        directory: ""
+        store_every: 10
+        checkpoint_every: 2
+    learning:
+        epochs: 0
+        decisive_loss: train/optimization/loss:total
+        deterministic: True
+        seed_offset: 0
+        criterion:
+            loss: ""
+        optimizer:
+            assembly: serie
+            optimizers: {}
+        scheduler:
+            assembly: clone
+            name: ""
+    steps:
+        type: SequentialSteps
+        data: train
+        criterion: null
+        fakebatch: true
+    validation:
+        val:
+            data: val
+            output: null
+            criterion: null
+        oxford:
+            data: oxford
+            output: inference
+            criterion:
+                typle: multi
+                original:
+                    loss: mAP
+                    dataset: oxford
+            network:
+                runtime:
+                    wrappers: multiscale:True
+output:
+    debug: True
+    training:
+        tensorboard: True
+    inference:
+        name: ""
+data:
+    train / val / test:
+        mean_std: []
+        train_cols: 1
+        transforms: ""
+        dataset:
+            name: ""
+            image_dir: ""
+        loader:
+            batch_size: 0

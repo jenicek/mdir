@@ -1,0 +1,6 @@
+pyyaml
+h5py
+opencv-python
+matplotlib
+torch>=1.0
+torchvision

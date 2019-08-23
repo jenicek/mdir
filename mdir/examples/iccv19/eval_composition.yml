@@ -1,0 +1,11 @@
+#
+# Evaluation of "U-Net jointly N/D" experiment from the iccv19 paper
+#
+
+network:
+  path: http://cmp.felk.cvut.cz/daynightretrieval/download/models/vgg_unet_jointly_sfmnd0.25-88869e65.pth
+  runtime:
+    wrappers:
+      eval:
+        0_cirwhiten:
+          whitening: http://cmp.felk.cvut.cz/daynightretrieval/download/models/vgg_unet_jointly_sfmnd0.25-lw-2a505744.pkl

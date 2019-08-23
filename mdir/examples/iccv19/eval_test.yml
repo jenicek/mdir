@@ -1,0 +1,13 @@
+#
+# Evaluation of alexnet with CLAHE preprocessing as a test of reproducibility
+#
+# The following scores are expected: 39.06 ROxf (M), 58.94 RPar (M), 72.0 Tokyo
+#
+
+network:
+  path: http://cmp.felk.cvut.cz/daynightretrieval/download/models/alex_clahe_sfmnd0.25-4142b192.pth
+  runtime:
+    wrappers:
+      eval:
+        0_cirwhiten:
+          whitening: http://cmp.felk.cvut.cz/daynightretrieval/download/models/alex_clahe_sfmnd0.25-whit-87d5d095.pkl

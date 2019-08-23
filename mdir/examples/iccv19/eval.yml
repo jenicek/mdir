@@ -1,0 +1,43 @@
+#
+# Evaluation used in the iccv19 paper
+#
+
+network:
+  path: null
+  runtime:
+    wrappers:
+      train:
+      eval:
+        0_cirwhiten: {whitening: null, dimensions: null}
+        1_cirmultiscale: {scales: True}
+validation:
+  type: MultiCriterialValidation
+  decisive_criterion: null
+  roxford5k:
+    type: SingleValidation
+    frequency: null
+    criterion:
+      type: cirdatasetap
+      image_size: 1024
+      dataset: roxford5k
+    network_overlay: null
+    data: null
+  rparis6k:
+    type: SingleValidation
+    frequency: null
+    criterion:
+      type: cirdatasetap
+      image_size: 1024
+      dataset: rparis6k
+    network_overlay: null
+    data: null
+  247tokyo1k:
+    type: SingleValidation
+    frequency: null
+    criterion:
+      type: cirdatasetap
+      image_size: 1024
+      dataset: 247tokyo1k
+    network_overlay: null
+    data: null
+data: {}
