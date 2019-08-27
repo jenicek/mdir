@@ -6,7 +6,7 @@ A code repository for the following publication:
 [Tomas Jenicek][jenicek] and [Ondřej Chum][chum]  
 In International Conference on Computer Vision (ICCV), 2019
 
-Related:&nbsp; [project website][daynight]
+Related:&nbsp; [project website][daynight],&nbsp; [paper pdf][arxiv]
 
 This codebase builds on top of [cirtorch](https://github.com/filipradenovic/cnnimageretrieval-pytorch). Its patched version is distributed together with the code and its dataset format is honored.
 
@@ -62,5 +62,6 @@ Currently, convenient scripts are provided only for evaluation. For training, on
 <!-- References -->
 
 [daynight]: http://cmp.felk.cvut.cz/daynightretrieval/
+[arxiv]: https://arxiv.org/pdf/1908.08999.pdf
 [jenicek]: http://cmp.felk.cvut.cz/~jenicto2
 [chum]: http://cmp.felk.cvut.cz/~chum
